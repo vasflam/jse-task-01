@@ -18,9 +18,10 @@ public class Main {
                 new Teacher("God", "Person", "kinobi@space.com", new Date(), TeacherGrade.God)
         ));
 
+        Random rand = new Random();
         for (Student s: students) {
-            Random r = new Random();
-            Teacher t = teachers.get(r.nextInt(teachers.size()));
+            int r = rand.nextInt(teachers.size());
+            Teacher t = teachers.get(r);
             System.out.printf(
                 "Student: %s[gid=%d] was teached by %s [%s]\n",
                 s.getFullName(),
